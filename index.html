@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#FE5185">
+	<meta name="msapplication-TileColor" content="#FE5185">
+  <meta itemprop="name" content="Resetuj filter">
+  <meta itemprop="description" content="Resetuj Xiaomi filter">
+  <meta property="og:title" content="Resetuj Xiaomi filter" />
+  <meta property="og:description" content="" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Resetuj Xiaomi filter"/>
+  <meta name="twitter:description" content="Resetuj Xiaomi filter"/>
+
+  <link rel="icon" type="image/x-icon" href="/img/favicon-32x32.png">
+
+	<title>Resetuj Xiaomi filter</title>
+  <meta name="description" content="Resetujte svoj Xiaomi filter putem mobilnog telefona" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+</head>
+
+<body id="page">
+	
+	<div class="container">
+    <h2 style="text-align: center;margin-top: 15px;">RESETOVANJE FILTERA</h2>
+    <h3 style="text-align: center;"> Xiaomi prečišćivač  vazduha  </h3>
+    <h5 style="text-align: center;"> (3H, PRO, 4 Pro, MI PRO, MI PRO H, itd)  </h5>
+    <div class="header">
+  
+    <div class="main-box">
+
+      <p class="box-title"><b>PREDUSLOVI</b></p>
+      <ol>
+        <li>Android ili iOS telefon sa podrškom za NFC</li>
+        <li>Xiaomi prečišćivač  vazduha</li>
+      </ol>
+
+      <p class="box-title"><b>POSTUPAK</b></p>
+      <ol>
+        <li>Instalirajte NFC Tools (<a href="https://play.google.com/store/apps/details?id=com.wakdev.wdnfc&hl=en_US" target="_blank">Android</a>, <a href="https://apps.apple.com/us/app/nfc-tools/id1252962749" target="_blank">iOS</a>)</li>
+        <li>Izvadite Xiaomi filter iz uređaja (<a href="./img/slika1.jpg" target="_blank">Slika 1</a>, <a href="./img/slika2.jpg" target="_blank">Slika 2</a>, <a href="./img/slika3.jpg" target="_blank">Slika 3</a>)</li>
+        <li>Ne budite lenji, očistite/usisajte filter! (<a href="./img/slika4.jpg" target="_blank">Slika 4</a>)</li>
+        <li>Pronađite tag koji se nalazi sa spoljne strane filtera (<a href="./img/slika5.jpg" target="_blank">Slika 5</a>, <a href="./img/slika6.jpg" target="_blank">Slika 6</a>)</li>
+        <li>Otvorite NFC Tools aplikaciju na telefonu (<a href="./img/slika7.jpg" target="_blank">Slika 7</a>)</li>
+        <li>Prislonite telefon (dok radi aplikacija) na tag - trebalo bi da dobijete pročitane podatke (<a href="./img/slika8.jpg" target="_blank">Slika 8</a>)</li>
+        <li>Kopirajte serijski broj iz aplikacije (<a href="./img/slika9.jpg" target="_blank">Slika 9</a>)</li>
+        <li>Ubacite serijski broj ispod i generišite komandu za resetovanje filtera</li>
+        <br>
+
+        <div id="input-serial-number">
+          <form action="javascript:generateCommand()" class="form-url">
+            <input type="text" class="input-url" placeholder="Kopirajte serijski broj ovde" id="input-serial-number-id" required>
+            <button type="submit" class="input-url-button">Generiši komandu</button>
+          </form>
+        </div>
+
+        <div id="generated-command" style="margin-top: 10px; margin-left: 10px; width: fit-content;">
+            <input type="text" class="input-url" style="width: 300px;" placeholder="<GENERISANA KOMANDA>" id="input-command" disabled>
+            <i class="fas fa-clone" onclick="copyToClipboard(event)" id="copy-to-clipboard-icon" style="display: none; cursor: pointer;"></i> 
+        </div>
+        
+        <br>
+        <li>Otvorite u aplikaciji NFC Tools -> Other -> Advanced NFC Commands (<a href="./img/slika10.jpg" target="_blank">Slika 10</a>, <a href="./img/slika11.jpg" target="_blank">Slika 11</a>) </li>
+        <li>U "I/O class" odaberite "NfcA (ISO 14443-3A)" (<a href="./img/slika12.jpg" target="_blank">Slika 12</a>)</li>
+        <li>Kopirajte generisanu komandu (iz koraka 8) u "Data" polje (<a href="./img/slika13.jpg" target="_blank">Slika 13</a>) </li>
+        <li>Prislonite telefon na tag i pritisnite "Send command", zatim idite na "Send" u prozoru koji će se pojaviti, nakon toga trebalo bi da dobijete potvrdu da je komanda uspesno izvršena (<a href="./img/slika14.jpg" target="_blank">Slika 14</a>, <a href="./img/slika15.jpg" target="_blank">Slika 15</a>) </li>
+        <li>Vratite, nadam se očišćeni/usisani, filter u prečišćivač</li>
+        <li>Nakon uključivanja, dočekaće vas poruka da je filter na 100% (<a href="./img/slika16.jpg" target="_blank">Slika 16</a>)</li>
+        <li><b>Napomena:</b> Ako prečišćivač ima podršku za WIFI, u Mi Home mobilnoj aplikaciji status filtera će se promeniti tek kroz nekoliko sati</li>
+
+      </ol>
+        
+      <p class="box-title"><b>IZVORI/RADOVI</b></p>
+
+      <ul>
+        <li><a href="https://github.com/Flamingo-tech/xiaomi-air-purifier-reverse-engineering">[https://github.com/Flamingo-tech/xiaomi-air-purifier-reverse-engineering]</a></li>
+        <li><a href="https://www.flamingo-tech.nl/2021/03/12/xiaomi-air-purifier-3h-reverse-engineering-part1/">[https://www.flamingo-tech.nl/2021/03/12/xiaomi-air-purifier-3h-reverse-engineering-part1/]</a></li>
+        <li><a href="https://www.flamingo-tech.nl/2021/04/05/xiaomi-air-purifier-3h-reverse-engineering-part-2-fremont-dump/">[https://www.flamingo-tech.nl/2021/04/05/xiaomi-air-purifier-3h-reverse-engineering-part-2-fremont-dump/]</a></li>
+        <li><a href="https://flamingo-tech.nl/2021/05/03/xiaomi-air-purifier-3h-reverse-engineering-part-3-esp32-dump/">[https://flamingo-tech.nl/2021/05/03/xiaomi-air-purifier-3h-reverse-engineering-part-3-esp32-dump/]</a></li>
+        <li><a href="https://unethical.info/2024/01/24/hacking-my-air-purifier/">[https://unethical.info/2024/01/24/hacking-my-air-purifier/]</a></li></li>
+      </ul> 
+    </div> <!-- .main-box -->
+  </div> <!-- .container -->
+</body>
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script>
+  async function generatPassword(uid) {
+
+      // Preuzeto od https://unethical.info/2024/01/24/hacking-my-air-purifier/
+
+      // Convert the uid from hex string to a byte array
+      const uidBytes = new Uint8Array(uid.match(/.{1,2}/g).map(byte => parseInt(byte, 16)));
+      // Create SHA-1 hash of the uid byte array
+      const hashBuffer = await crypto.subtle.digest('SHA-1', uidBytes);
+      // Convert the hash to a Uint8Array for byte manipulation
+      const hashArray = new Uint8Array(hashBuffer);
+
+      // Calculate the password
+      let pwd = '';
+      pwd += hashArray[hashArray[0] % 20].toString(16).toUpperCase().padStart(2, '0');
+      pwd += hashArray[(hashArray[0] + 5) % 20].toString(16).toUpperCase().padStart(2, '0');
+      pwd += hashArray[(hashArray[0] + 13) % 20].toString(16).toUpperCase().padStart(2, '0');
+      pwd += hashArray[(hashArray[0] + 17) % 20].toString(16).toUpperCase().padStart(2, '0');
+
+      return pwd;
+  }
+
+  async function generateCommand() {
+      let serialNumber = document.getElementById("input-serial-number-id").value.trim();
+      let serialNumberWithoutColons = serialNumber.replace(/:/g, '');
+
+      if (serialNumberWithoutColons.length === 14) {
+          const password = await generatPassword(serialNumberWithoutColons);
+          document.getElementById('input-command').value = "1B"+password +",3008,A20800000000";
+          document.getElementById("copy-to-clipboard-icon").style.display = 'inline';
+
+      } else {
+          document.getElementById('input-command').value = "Neispravan unos serijskog broja";
+          document.getElementById("copy-to-clipboard-icon").style.display = 'none';
+      }
+  }
+
+  function copyToClipboard(event) {
+        const textToCopy = document.getElementById("input-command").value.trim();
+        navigator.clipboard.writeText(textToCopy); // Copy the text
+        
+        event.target.className = "fa fa-check";
+        
+        setTimeout(function () {
+            // Revert back to clone icon after 2 seconds
+            event.target.className = "fas fa-clone";
+            event.target.blur();
+        }, 3000);
+
+        // https://github.com/apvarun/toastify-js/blob/master/README.md
+        Toastify({
+            text: "Kopirano u klipbord: \n\"" + textToCopy + "\"",
+            gravity: "bottom",
+            stopOnFocus: true,
+            style: {
+                "background": "linear-gradient(to right, white, #f8f8f8)",
+                "color": "black",
+                "text-align": "center"
+            },
+            duration: 3000, // Duration in milliseconds
+        }).showToast();
+    }
+</script>
+
+</html>
