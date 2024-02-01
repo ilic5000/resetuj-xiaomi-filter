@@ -6,18 +6,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="theme-color" content="#FE5185">
-	<meta name="msapplication-TileColor" content="#FE5185">
+	<meta name="msapplication-TileColor" content="#FE5183">
   <meta itemprop="name" content="Resetuj filter">
   <meta itemprop="description" content="Resetuj Xiaomi filter">
   <meta property="og:title" content="Resetuj Xiaomi filter" />
-  <meta property="og:description" content="" />
+  <meta property="og:description" content="Resetujte svoj Xiaomi filter putem mobilnog telefona" />
   <meta property="og:type" content="website" />
 
   <meta name="twitter:card" content="summary"/>
   <meta name="twitter:title" content="Resetuj Xiaomi filter"/>
   <meta name="twitter:description" content="Resetuj Xiaomi filter"/>
 
-  <link rel="icon" type="image/x-icon" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/x-icon" href="./img/cb-favicon32x32.png">
 
 	<title>Resetuj Xiaomi filter</title>
   <meta name="description" content="Resetujte svoj Xiaomi filter putem mobilnog telefona" />
@@ -28,13 +28,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   
   <style>
-
     .footer-social {
         text-align: center;
         margin-top: 20px;
@@ -71,11 +69,7 @@
         color: #007bff;
         text-decoration: underline;
     }
-
-    
-</style>
-
-
+  </style>
 </head>
 
 <body id="page">
@@ -86,7 +80,6 @@
     <h5 style="text-align: center;"> (3H, PRO, 4 Pro, MI PRO, MI PRO H, itd)  </h5>
     <div class="header">
     
-
     <div class="main-box">
       <img src="img/slika0.jpg" width="200px" height="100px" style="display: block;margin-left: auto;margin-right: auto;">
       <br>
@@ -97,6 +90,7 @@
       </ol>
       <br>
       <p class="box-title"><b>POSTUPAK</b></p>
+
       <ol>
         <li>Instalirajte NFC Tools (<a href="https://play.google.com/store/apps/details?id=com.wakdev.wdnfc&hl=en_US" target="_blank">Android</a>, <a href="https://apps.apple.com/us/app/nfc-tools/id1252962749" target="_blank">iOS</a>)</li>
         <li>Izvadite Xiaomi filter iz uređaja (<a href="./img/slika1.jpg" target="_blank">Slika 1</a>, <a href="./img/slika2.jpg" target="_blank">Slika 2</a>, <a href="./img/slika3.jpg" target="_blank">Slika 3</a>)</li>
@@ -128,9 +122,10 @@
         <li>Vratite, nadam se očišćeni/usisani, filter u prečišćivač</li>
         <li>Nakon uključivanja, dočekaće vas poruka da je filter na 100% (<a href="./img/slika16.jpg" target="_blank">Slika 16</a>)</li>
         <li><b>Napomena:</b> Ako prečišćivač ima podršku za WIFI, u Mi Home mobilnoj aplikaciji status filtera će se promeniti tek kroz nekoliko sati</li>
-
       </ol>
-        
+
+      <br>
+
       <p class="box-title"><b>IZVORI/RADOVI</b></p>
 
       <ul>
@@ -141,7 +136,7 @@
         <li><a href="https://unethical.info/2024/01/24/hacking-my-air-purifier/">[unethical.info]</a></li></li>
       </ul> 
     </div> <!-- .main-box -->
-  </div> <!-- .container -->
+  </div> <!-- .header -->
 
   <div class="footer-social">
     <a href="https://www.linkedin.com/in/ilic5000" target="_blank" class="social-icon"><i
@@ -152,13 +147,12 @@
             class="fab fa-facebook"></i></a>
 </div>
 
-
 </body>
 <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script>
   async function generatPassword(uid) {
 
-      // Preuzeto od https://unethical.info/2024/01/24/hacking-my-air-purifier/
+      // Preuzeto sa https://unethical.info/2024/01/24/hacking-my-air-purifier/
 
       // Convert the uid from hex string to a byte array
       const uidBytes = new Uint8Array(uid.match(/.{1,2}/g).map(byte => parseInt(byte, 16)));
@@ -183,6 +177,7 @@
 
       if (serialNumberWithoutColons.length === 14) {
           const password = await generatPassword(serialNumberWithoutColons);
+          // Preuzeto sa https://unethical.info/2024/01/24/hacking-my-air-purifier/
           document.getElementById('input-command').value = "1B"+password +",3008,A20800000000";
           document.getElementById("copy-to-clipboard-icon").style.display = 'inline';
 
