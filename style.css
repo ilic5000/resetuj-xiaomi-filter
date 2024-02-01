@@ -1177,6 +1177,11 @@ a.btn,
 	.input-url-button{
 		margin-left: -85px;
 	}
+
+	#input-command{
+		width: 253px !important;
+  		margin-left: -27px !important;
+	}
 }
 
 .form-url .input-url-button {
