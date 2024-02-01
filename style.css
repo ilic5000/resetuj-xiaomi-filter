@@ -1166,6 +1166,16 @@ a.btn,
 	.form-url .input-url {
 		padding-right: 0;
 		font-size: 14px;
+		
+	}
+
+	ul,ol
+	{
+		margin: 0 0 0 0;
+	}
+
+	.input-url-button{
+		margin-left: -85px;
 	}
 }
 
