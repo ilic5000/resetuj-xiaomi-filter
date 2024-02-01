@@ -1168,6 +1168,7 @@ a.btn,
 		font-size: 11px;
 	}
 
+	
 	ul,ol
 	{
 		margin: 0 0 0 0;
@@ -1175,6 +1176,7 @@ a.btn,
 
 	.input-url-button{
 		margin-left: -85px;
+		width: 38% !important;
 	}
 
 	#input-command{
