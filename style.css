@@ -1179,8 +1179,9 @@ a.btn,
 	}
 
 	#input-command{
-		width: 253px !important;
-  		margin-left: -27px !important;
+		width: 220px !important;
+  		margin-left: -8px !important;
+		font-size: 0.7rem !important;
 	}
 }
 
