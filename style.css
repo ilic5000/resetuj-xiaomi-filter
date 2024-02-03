@@ -1017,7 +1017,9 @@ a.btn,
 }
 
 .header a {
-	text-decoration: none;
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-decoration-color: #555353;
 }
 
 .header .logo h1 {
